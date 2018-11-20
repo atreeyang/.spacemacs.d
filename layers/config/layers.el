@@ -7,6 +7,7 @@
                     auto-completion-return-key-behavior 'complete
                     auto-completion-tab-key-behavior 'complete
                     auto-completion-enable-snippets-in-popup t)
+   epub
    better-defaults
    git
    (ivy :variables
@@ -38,6 +39,7 @@
    emacs-lisp
    haskell
    hy
+   (sql :variables sql-capitalize-keywords t)
    (python :variables
            python-test-runner 'pytest
            python-spacemacs-indent-guess nil)

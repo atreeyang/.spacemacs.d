@@ -26,7 +26,7 @@
 
 ;;;; Configuration
 
-(defvar server? (if eric? t nil)
+(defvar server? (if eric? nil t)
   "Alias `dotspacemacs-enable-server'. Defaults to nil for non-eric users.")
 
 (defvar redo-bindings? (if eric? t nil)
@@ -58,7 +58,8 @@ Check `dotspacemacs/get-variable-string-list' for all vars you can configure."
                                     "DejaVuSansMono YaHei NF"
                                   "Source Code Pro")
                                :size ,(if (= 1440 (display-pixel-height)) 16 14))
-   dotspacemacs-themes       '(solarized-light
+   dotspacemacs-themes       '(
+                               solarized-light
                                zenburn)
 
    ;; General
@@ -90,7 +91,8 @@ Check `dotspacemacs/get-variable-string-list' for all vars you can configure."
 (defun dotspacemacs/layers ()
   "Instantiate Spacemacs layers declarations and package configurations."
   (setq-default
-   dotspacemacs-configuration-layers     '((macros   :location local)
+   dotspacemacs-configuration-layers     '(shell-scripts
+                                           (macros   :location local)
                                            (config   :location local)
                                            (display  :location local)
                                            (personal :location local))
